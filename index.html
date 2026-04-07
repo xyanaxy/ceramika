@@ -53,24 +53,31 @@
     transition:color .3s;
   }
   .nav-logo:hover { color:var(--blue-glow); }
-  .nav-about {
+  .nav-about, .nav-cv, .nav-portfolio {
     font-family:'Work Sans', sans-serif; font-weight:400;
     font-size:0.9rem; letter-spacing:0.22em; text-transform:uppercase;
-    color:var(--beige-0); background:none; border:none;
+    color:var(--blue-glow); background:none; border:none;
     cursor:none; pointer-events:all;
     position:relative; padding-bottom:4px;
     transition:color .3s;
     text-shadow:0 0 20px rgba(0,0,0,0.5);
     text-decoration: none;
   }
-  .nav-about::after {
+  .nav-about {
+    margin-left:auto;
+    margin-right:18px;
+  }
+  .nav-cv {
+    margin-right:18px;
+  }
+  .nav-about::after, .nav-cv::after, .nav-portfolio::after {
     content:''; position:absolute; bottom:0; left:0;
     width:0; height:1px;
     background:var(--blue-glow); box-shadow:0 0 8px var(--blue-sh);
     transition:width .4s;
   }
-  .nav-about:hover { color:var(--blue-glow); }
-  .nav-about:hover::after { width:100%; }
+  .nav-about:hover, .nav-cv:hover, .nav-portfolio:hover { color:var(--blue-glow); }
+  .nav-about:hover::after, .nav-cv:hover::after, .nav-portfolio:hover::after { width:100%; }
 
   /* ── GRID ── */
   #grid {
@@ -250,6 +257,8 @@
 <nav>
   <a href="#" class="nav-logo">ceramica</a>
   <a href="about.html" class="nav-about">About</a>
+  <a href="cv.html" class="nav-cv">CV</a>
+  <a href="portfolio.html" class="nav-portfolio">Portfolio</a>
 </nav>
 
 <div class="hint" id="hint">click the images</div>
